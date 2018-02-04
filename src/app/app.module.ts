@@ -8,6 +8,10 @@ import { AppRoutingModule} from './app-routing/app-routing.module';
 import {RouterModule} from '@angular/router';
 import { ClientComponent } from './client/client.component';
 import { HomeComponent } from './home/home.component';
+import { ReceiptComponent } from './receipt/receipt.component';
+import {ItemService} from './item.service';
+import {ReceiptService} from './receipt.service';
+import {ClientService} from './client.service';
 
 
 @NgModule({
@@ -15,14 +19,15 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     ItemComponent,
     ClientComponent,
-    HomeComponent
+    HomeComponent,
+    ReceiptComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule
   ],
-  providers: [],
+  providers: [ItemService, ReceiptService, ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

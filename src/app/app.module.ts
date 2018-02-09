@@ -12,6 +12,9 @@ import { ReceiptComponent } from './receipt/receipt.component';
 import {ItemService} from './item.service';
 import {ReceiptService} from './receipt.service';
 import {ClientService} from './client.service';
+import {MatButtonModule} from '@angular/material';
+import { AppointmentComponent } from './appointment/appointment.component';
+import {AppointmentService} from './appointment.service';
 
 
 @NgModule({
@@ -20,14 +23,16 @@ import {ClientService} from './client.service';
     ItemComponent,
     ClientComponent,
     HomeComponent,
-    ReceiptComponent
+    ReceiptComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule
   ],
-  providers: [ItemService, ReceiptService, ClientService],
+  providers: [ItemService, ReceiptService, ClientService, AppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

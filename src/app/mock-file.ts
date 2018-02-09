@@ -9,16 +9,16 @@ export const ITEMS: Item[] = [
   {id: 4, manufacturer: 'Laica', name: 'Lentila', descripion: 'concava'},
 ];
 
-export const CLIENT: Client[] = [
+export const CLIENTS: Client[] = [
   {id: 1, firstName: 'Ioan', lastName: 'Popa'},
   {id: 2, firstName: 'Ioana', lastName: 'Popa'},
   {id: 3, firstName: 'Ana', lastName: 'Pop'},
   {id: 4, firstName: 'Ioan', lastName: 'Pop'},
 ];
 
-export  const RECEIPT: Receipt[] = [
+export  const RECEIPTS: Receipt[] = [
   {id: 1, description: 'Picaturi ochi 1'},
   {id: 2, description: 'Picaturi ochi 2'},
   {id: 3, description: 'Picaturi ochi 3'},
   {id: 4, description: 'Picaturi ochi 4'},
-]
+];

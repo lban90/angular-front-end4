@@ -16,14 +16,18 @@ const routes: Routes = [
     component: ClientComponent,
   },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {
     path: 'receipt',
     component: ReceiptComponent
+  },
+  {
+    path: '',
+    component: HomeComponent,
   }
-]
+];
 
 @NgModule({
   imports: [

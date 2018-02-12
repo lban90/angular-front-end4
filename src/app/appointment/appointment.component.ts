@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AppointmentService} from '../appointment.service';
+import {Appointment} from '../appointment';
 
 @Component({
   selector: 'app-appointment',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private appointmentService: AppointmentService,
+  ) { }
+  appointmentsList: Appointment[];
+  getAppointments() {
+    this.appointmentsList = this.appointmentService.getAppointments();
+  }
 
   ngOnInit() {
+    this.getAppointments();
   }
 
 }

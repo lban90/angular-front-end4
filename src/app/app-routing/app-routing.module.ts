@@ -5,6 +5,7 @@ import { ItemComponent} from '../item/item.component';
 import {ClientComponent} from '../client/client.component';
 import {HomeComponent} from '../home/home.component';
 import {ReceiptComponent} from '../receipt/receipt.component';
+import {AppointmentComponent} from '../appointment/appointment.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'appointment',
+    component: AppointmentComponent,
   }
 ];
 

@@ -1,6 +1,5 @@
 export class Appointment {
   appointment_id: number;
-  appointment_name: string;
   appointment_client_first_name: string;
   appointment_client_last_name: string;
   appointment_type: string;

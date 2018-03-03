@@ -7,18 +7,20 @@
           <th scope="col">First</th>
           <th scope="col">Last</th>
           <th scope="col">Appointment Type</th>
-          <th scope="col"><mat-form-field class="example-full-width">
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <th scope="col">
+            <mat-form-field class="example-full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateInput)="getDate($event);getAppointmentsByDate()">
             <mat-datepicker-toggle matSuffix [for]="picker">
               <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
             </mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field></th>
+          </mat-form-field>
+          </th>
           <th scope="col">Hour</th>
         </tr>
         </thead>
-        <tbody>
-        <tr *ngFor="let appointment of appointmentsList">
+        <tbody class="body">
+        <tr class="appointment" *ngFor="let appointment of appointmentsListByDate">
           <th scope="row">{{appointment.appointment_id}}</th>
           <td>{{appointment.appointment_client_first_name}}</td>
           <td>{{appointment.appointment_client_last_name}}</td>
@@ -42,9 +44,9 @@
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Bla</div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">bla</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">BLA</div>
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><app-create-appointment></app-create-appointment></div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><app-preview-appointment></app-preview-appointment></div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><app-update-appointment></app-update-appointment></div>
       </div>
     </div>
 </div>

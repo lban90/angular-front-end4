@@ -1,5 +1,9 @@
-tr:hover{
+.appointment:hover{
   background: rgba(12, 0, 223, 0.09);
+}
+
+.body{
+  margin: 1px;
 }
 
 .collumn {
@@ -14,4 +18,12 @@ tr:hover{
   content: "";
   display: table;
   clear: both;
+}
+
+.full-width{
+  width: 1000px;
+}
+
+.half-width{
+  width: 50%;
 }

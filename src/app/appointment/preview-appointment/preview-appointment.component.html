@@ -1,0 +1,67 @@
+<div class="full-width">
+  <p class="add"><b>PREVIEW APPOINTMENT</b></p>
+  <table class="full-width">
+    <tr class="full-width">
+      <td class="half-width">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="First Name">
+        </mat-form-field>
+      </td>
+      <td class="half-width">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Last Name">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <table class="full-width">
+    <tr class="full-width">
+      <td class="third-width">
+        <mat-form-field class="third-width" >
+          <mat-select placeholder="Select appointment type" required>
+            <mat-option value="CONSULT">CONSULT</mat-option>
+            <mat-option value="INVESTIGATION">INVESTIGATION</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="third-width" >
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="third-width" >
+          <input matInput placeholder="Hour">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <table class="full-width">
+    <tr class="full-width">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Appointment description">
+      </mat-form-field>
+    </tr>
+    <tr class="full-width">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Appointment concluzion">
+      </mat-form-field>
+    </tr>
+  </table>
+  <table class="full-width">
+    <tr class="full-width">
+      <td class="half-width">
+        <mat-form-field class="full-width" >
+          <mat-select placeholder="Select appointment status" required>
+            <mat-option value="INITIALIZED">INITIALIZED</mat-option>
+            <mat-option value="WORK IN PROGRES">WORK IN PROGRES</mat-option>
+            <mat-option value="COMPLETED">COMPLETED</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+      <td class="half-width">
+        <button mat-button class="styleButton"><b>ADD</b></button>
+      </td>
+    </tr>
+  </table>
+</div>

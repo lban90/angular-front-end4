@@ -5,3 +5,11 @@
 <ul>
   <li *ngFor="let client of clientslist">{{client.id}}&nbsp;{{client.firstName}}&nbsp;{{client.lastName}}</li>
 </ul>
+
+
+<p>
+  {{message}} {{message3}}
+</p>
+
+<button (click)="sendMessage()">Send message</button>
+<button (click)="sendMessage2()">Send message 2</button>

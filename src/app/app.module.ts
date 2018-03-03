@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {Directive, NgModule} from '@angular/core';
 
 
 import { AppComponent } from './app.component';
@@ -13,9 +13,10 @@ import {ItemService} from './item.service';
 import {ReceiptService} from './receipt.service';
 import {ClientService} from './client.service';
 import {
-  MatButtonModule, MatDatepickerModule, MatDatepickerToggle, MatFormFieldModule, MatIconModule, MatInputModule,
+  MatButtonModule, MatCardModule, MatDatepickerModule, MatDatepickerToggle, MatFormFieldModule, MatIconModule,
+  MatInputModule,
   MatMenuModule,
-  MatNativeDateModule,
+  MatNativeDateModule, MatSelectModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
@@ -23,6 +24,9 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import {AppointmentService} from './appointment.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CreateAppointmentComponent } from './appointment/create-appointment/create-appointment.component';
+import { PreviewAppointmentComponent } from './appointment/preview-appointment/preview-appointment.component';
+import { UpdateAppointmentComponent } from './appointment/update-appointment/update-appointment.component';
 
 
 
@@ -33,7 +37,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ClientComponent,
     HomeComponent,
     ReceiptComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    CreateAppointmentComponent,
+    PreviewAppointmentComponent,
+    UpdateAppointmentComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +58,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule
   ],
   providers: [ItemService, ReceiptService, ClientService, AppointmentService],
   bootstrap: [AppComponent]
